@@ -36,3 +36,57 @@ function doubleArray(arr) {
 console.log(doubleArray([1,2,3]));
 
 
+// 4
+function countOccurrences(arr, val) {
+    let count = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] == val) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+console.log(countOccurrences([1,2,2,3,2], 2));
+
+
+// 5
+function getObjectKeys(obj) {
+    let arr = [];
+
+    for (let k in obj) {
+        arr.push(k);
+    }
+
+    return arr;
+}
+
+console.log(getObjectKeys({a:1,b:2}));
+
+
+// 6
+function mergeObjects(a, b) {
+    let obj = {};
+
+    for (let k in a) {
+        obj[k] = a[k];
+    }
+
+    for (let k in b) {
+        obj[k] = b[k];
+    }
+
+    return obj;
+}
+
+console.log(mergeObjects({a:1,b:2},{b:3,c:4}));
+
+
+// 7
+document.getElementById("addButton").onclick = function () {
+    let li = document.createElement("li");
+    li.innerHTML = "New Item";
+    document.getElementById("myList").appendChild(li);
+};
